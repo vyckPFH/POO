@@ -8,10 +8,59 @@ public class ListaEncadeada {
     private No first;
     private No last;
 
-    public void toRemoveFirst(){
+    public void toRemoveAt(int pos){
+        //if (size == 0) return;
+        if (pos == 0) {
+            toRemoveFirst();
+            return;
+        }
+        if (pos == size) {
+            toRemoveLast();
+            return;
+        }
+        if (size == 1) {
+            first = null;
+            last = null;
+            return;
+        }
+       
+        No current = first;// no atual recebe primeiro no[current = atual]
+        No next = current.getNext();
+
+        for (int i = 0; i < pos - 1; i++) {
+            current = current.getNext();
+            next = current.getNext().getNext();
+        }
+
+        current.setNext(next);
+        size--;
+
+    }
+
+
+    public void toRemoveLast() {
         if (size == 0) {
             return;
         }
+
+        No current = first;// no atual recebe primeiro no[current = atual]
+
+        for (int i = 0; i < size - 1; i++) {
+            current = current.getNext();
+        }
+
+        current.setNext(null);
+        size--;
+
+    }
+
+    public void toRemoveFirst() {
+        if (size == 0) {
+            return;
+        }
+
+        first = first.getNext();
+        size--;
 
     }
 
@@ -20,7 +69,7 @@ public class ListaEncadeada {
         System.out.println("Lixta: ");
 
         for (int i = 0; i < size; i++) {
-            System.out.println(iterator.getElemento() + " ");
+            System.out.print(iterator.getElemento() + " ");
             iterator = iterator.getNext();
         }
 
@@ -43,7 +92,7 @@ public class ListaEncadeada {
         no.setNext(null);
         No current = first;// no atual recebe primeiro no[current = atual]
 
-        for (int i = 0; i < pos-1; i++) {
+        for (int i = 0; i < pos - 1; i++) {
             current = current.getNext();
         }
 
