@@ -8,7 +8,12 @@ public class ListaEncadeada {
     private No first;
     private No last;
 
-    public void remove
+    public void toRemoveFirst(){
+        if (size == 0) {
+            return;
+        }
+
+    }
 
     public void show() {
         No iterator = first;
