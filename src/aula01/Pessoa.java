@@ -1,3 +1,4 @@
+package aula01;
 public class Pessoa{
     private String nome;
     private String email;

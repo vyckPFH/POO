@@ -1,3 +1,4 @@
+package aula01;
 public class Endereco {
     private String rua;
     private String numero;

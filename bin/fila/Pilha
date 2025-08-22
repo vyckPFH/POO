@@ -1,0 +1,18 @@
+
+
+public class Pilha{ //FILO = first in last out
+    ListaEncadeada pilha = new ListaEncadeada();
+
+    public Pilha(){
+
+    }
+
+    public void push(int elemento){
+        pilha.addLast(int elemento);
+    }
+
+    public void pop(int elemento){
+        pilha.toRemoveLast(int elemento);
+    }
+
+}
