@@ -8,6 +8,19 @@ public class ListaEncadeada {
     private No first;
     private No last;
 
+
+    @Override //importante
+    public String toString(){ //qnd é toString, pode dar sout automatico
+        No no = first;
+        String resposta = "";
+        for (int i = 0; i < size; i++) {
+            resposta = resposta + " " + no.getElemento()+" ";
+            no = no.getNext();
+        }
+        return resposta;
+    }
+
+
     public void toRemoveAt(int pos){
         //if (size == 0) return;
         if (pos == 0) {
@@ -36,7 +49,6 @@ public class ListaEncadeada {
         size--;
 
     }
-
 
     public void toRemoveLast() {
         if (size == 0) {
