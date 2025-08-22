@@ -9,7 +9,7 @@ public class ListaEncadeadaSemFim {
 
         for (int i = 0; i < size; i++) {
             if (cur.getNext() == null) {
-                cur.setElemento(first.getElemento());
+                return cur;
             }else{
                 cur = cur.getNext();
             }
