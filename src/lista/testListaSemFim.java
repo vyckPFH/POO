@@ -11,8 +11,11 @@ public class testListaSemFim {
         lista.addFirst(0);
 
         lista.addLast(5);
-     //   lista.addLast(9);
-      //  lista.addLast(0);
+    
         System.out.println(lista);
+        lista.toRemoveLast();
+        System.out.println(lista);
+
+        
     }
 }
