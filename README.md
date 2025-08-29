@@ -76,4 +76,4 @@ em OO: responsabilidade concentrada, polimorfismo.(pra validar um cpf, é uma cl
 
 + public: todo mundo acessa
 - Private: outras classes não acessam
-'  ': apenas classes do pacote acessam
+' ': apenas classes do pacote acessam
