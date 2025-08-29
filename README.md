@@ -35,7 +35,7 @@ ____________________________________________________________
 
 Em POO, a herança é um mecanismo que permite que uma classe (derivada ou filha) herde atributos e métodos de outra classe (base ou mãe), promovendo a reutilização de código e a organização em hierarquias. Essa relação possibilita criar classes mais específicas que se baseiam em modelos mais genéricos, como um Funcionário que herda características de Pessoa, facilitando a manutenção e tornando o código mais limpo. 
 
-ex:
+__ex🥖
 aluno: | [cpf ; nomee ; email ; dataNasc] | = +Pessoa
 Historico ; curso
 
