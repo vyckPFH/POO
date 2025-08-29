@@ -3,8 +3,8 @@ package LinkedList;
 public class NoLinkedList {
 
     private Object elemento = new Object();
-    private NoLinkedList proximo = new NoLinkedList();
-    private NoLinkedList anterior = new NoLinkedList();
+    private NoLinkedList next = new NoLinkedList();
+    private NoLinkedList before = new NoLinkedList();
 
     public NoLinkedList() {
     }
@@ -17,20 +17,20 @@ public class NoLinkedList {
         this.elemento = elemento;
     }
 
-    public NoLinkedList getProximo() {
-        return proximo;
+    public NoLinkedList getNext() {
+        return next;
     }
 
-    public void setProximo(NoLinkedList proximo) {
-        this.proximo = proximo;
+    public void setNext(NoLinkedList proximo) {
+        this.next = proximo;
     }
 
-    public NoLinkedList getAnterior() {
-        return anterior;
+    public NoLinkedList getBefore() {
+        return before;
     }
 
-    public void setAnterior(NoLinkedList anterior) {
-        this.anterior = anterior;
+    public void setBefore(NoLinkedList anterior) {
+        this.before = anterior;
     }
     
 
