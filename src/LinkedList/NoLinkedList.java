@@ -2,18 +2,18 @@ package LinkedList;
 
 public class NoLinkedList {
 
-    private Object elemento = new Object();
-    private NoLinkedList next = new NoLinkedList();
-    private NoLinkedList before = new NoLinkedList();
+    private int elemento;
+    private NoLinkedList next;
+    private NoLinkedList before;
 
     public NoLinkedList() {
     }
 
-    public Object getElemento() {
+    public int getElemento() {
         return elemento;
     }
 
-    public void setElemento(Object elemento) {
+    public void setElemento(int elemento) {
         this.elemento = elemento;
     }
 
