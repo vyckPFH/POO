@@ -1,5 +1,9 @@
 # POO
-
+CRUD
+C: add/inserir
+R: consultar/get/select
+U: alterar
+D: deletar/excluir
 
 # UML = linguagem de modelagem unificada / unified modeling linguage 
 

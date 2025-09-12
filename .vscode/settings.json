@@ -1,7 +1,9 @@
 {
     "java.project.sourcePaths": [
         "src",
-        "abstracao/gerenciamentoCursos"
+        "abstracao/gerenciamentoCursos",
+        "abstracao/correcao/gerenciamentoCursos/gerenciamentoCurso",
+        "abstracao/correcao/gerenciamentCursos"
     ],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": []
