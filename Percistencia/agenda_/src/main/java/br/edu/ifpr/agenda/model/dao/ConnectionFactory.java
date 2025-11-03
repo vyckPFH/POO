@@ -17,7 +17,7 @@ public class ConnectionFactory {
                 String user= "aluno";
                 String password="aluno";
                 conexao = DriverManager.getConnection(url, user, password);
-                System.out.println("conectado ao banco com sucesso!");
+                System.out.println("Conectado ao banco com sucesso!");
             }
         } catch (SQLException e) {
             
