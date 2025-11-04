@@ -5,10 +5,70 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 import br.edu.ifpr.agenda.model.*;
 
 public class ContatoDAO {
+
+    public ArrayList<Contato> select(){
+        Connection con = ConnectionFactory.getConnection();
+
+        ArrayList<Contato> contatos = new ArrayList<>();
+
+        try{
+            String sql = "SELECT * FROM contatos";
+            PreparedStatement ps = con.prepareStatement(sql);
+            
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                Contato contato = new Contato();
+
+                contato.setId(rs.getInt("id"));
+                contato.setNome(rs.getString("nome"));
+                contato.setCelular(rs.getString("celular"));
+                contato.setEmail(rs.getString("email"));
+                
+                contatos.add(contato);
+            }
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+        return contatos;
+    }
+    
+    public void deletebyidSemEndereco(int id){
+        Connection con = ConnectionFactory.getConnection();
+
+        try{
+            String sql = "delete from contatos where id=?";
+            PreparedStatement psContato = con.prepareStatement(sql);
+            psContato.setInt(1, id);
+            psContato.executeUpdate();
+            System.out.println("Contato deletado com sucesso!");
+        }catch(SQLException e){
+            System.out.println(e.getMessage());
+        }
+    }    
+
+    public void updateSemEndereco(Contato contato){
+        Connection con = ConnectionFactory.getConnection();
+
+        try{
+            String sql= "update contatos set nome=?, celular=?, email=? where id=?";
+
+            PreparedStatement psContato = con.prepareStatement(sql);
+            psContato.setString(1, contato.getNome());
+            psContato.setString(2, contato.getCelular());
+            psContato.setString(3, contato.getEmail());
+            psContato.setInt(4, contato.getId());
+            psContato.executeUpdate();
+            System.out.println("Contato atualizado com sucesso!!");
+        }catch (SQLException e){
+            System.out.println(e.getMessage());
+        }
+    }
     // Create
     public void salvar(Contato contato) {
         Connection conEndereco = ConnectionFactory.getConnection();
